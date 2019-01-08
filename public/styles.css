@@ -1,0 +1,79 @@
+body {
+	height: 100vh;
+	width: 100vw;
+	font-family: Circular, Helvetica, Arial;
+	font-size: 16px;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.hidden {
+	display: none;
+}
+
+.gradient-purple {
+	background-image: linear-gradient(#C074B2, #8AB5E8);
+}
+
+.gradient-sunset {
+	background: linear-gradient(#F037A5 -60%, #FAE62D 140%);
+}
+
+.gradient-blue {
+	background-color: #1fc8db;
+	background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+}
+
+.container {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.spotify-login {
+	color: #FFF;
+	background-color: #1DB954;
+	font-size: 16px;
+	line-height: 1;
+	border-radius: 500px;
+	padding: 19px 56px 21px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	white-space: normal;
+}
+
+.playlist {
+	width: 600px;
+	position: absolute;
+	right: 80px;
+	bottom: 80px;
+	border-radius: 10px;
+	background-color: rgb(40, 40, 40);
+	color: white;
+}
+
+.playlist table {
+	padding: 20px;
+	width: 100%;
+	border-collapse:separate; 
+	border-spacing: 0 1em;
+}
+
+.playlist caption {
+	padding-top: 20px;
+}
+
+.playlist td.command {
+	text-align: right;
+}
+
+.playlist a {
+	color: white;
+}

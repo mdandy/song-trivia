@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+	<title>Song Trivia</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript" src="lib.js"></script>
+	<script type="text/javascript" src="spotify-driver.js"></script>
+	<script type="text/javascript" src="playlist.js"></script>
+	<link type="text/css" rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+	<div class="container gradient-sunset">
+		<div class="playlist">
+			<table>
+				<caption>Guess the Song</caption>
+				<tbody id="playlist-table">
+					<tr class="playlist-track">
+						<td class="ordinal" data-ordinal="1">1</td>
+						<td class="mask" width="70%">Track 1</td>
+						<td class="answer hidden" width="70%">Sample Track</td>
+						<td class="command"><a href="javascript:void(0)" class="command-play" data-track-id="foo" onclick="play(this)">Play</a><td>
+						<td class="command"><a href="javascript:void(0)" class="command-play" onclick="reveal(this)">Reveal</a><td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<template id="playlist-track-template">
+			<tr class="playlist-track">
+				<td class="ordinal" data-ordinal="1">1</td>
+				<td class="mask" width="70%">Track 1</td>
+				<td class="answer hidden" width="70%">Sample Track</td>
+				<td class="command"><a href="javascript:void(0)" class="command-play" data-track-id="foo" onclick="play(this)">Play</a><td>
+				<td class="command"><a href="javascript:void(0)" class="command-play" onclick="reveal(this)">Reveal</a><td>
+			</tr>
+		</template>
+	</div>
+</body>
+
+</html>
