@@ -15,7 +15,6 @@ var playlist = {
 	}
 };
 
-
 function initialize() {
 	var params = getHashParams();
 	driver = new SpotifyDriver(params.access_token);
@@ -38,7 +37,7 @@ function initialize() {
 			generatePlaylistElem();
 		})
 		.catch(function(error) {
-			window.location.href = '/error.html#msg=' + error;
+			window.location.href = '/error.html#msg=' + error.message;
 		});
 }
 
