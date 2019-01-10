@@ -24,7 +24,7 @@ function initialize() {
 	var params = getHashParams();
 	driver = new SpotifyDriver(params.access_token);
 
-	var thePlaylist = playlistId ? playlistId : playlist_top_alltime;
+	var thePlaylist = playlistId ? playlistId : playlist_top_2018;
 	driver.fetchPlaylist(thePlaylist)
 		.then(function(result) {
 			playlist = {};
