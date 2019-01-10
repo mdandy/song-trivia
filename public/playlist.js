@@ -11,7 +11,8 @@ var playlist = {
 		id: "foo",
 		title: "Sample Track",
 		artist: "Sample Artist",
-		previewUrl: "foo.com"
+		previewUrl: "foo.com",
+		spotifyUrl: "error.html#msg=Not%20Found"
 	}
 };
 
@@ -39,7 +40,8 @@ function initialize() {
 					id: track.id,
 					title: track.name,
 					artist: track.artists[0].name,
-					previewUrl: track.preview_url
+					previewUrl: track.preview_url, 
+					spotifyUrl: track.external_urls.spotify
 				};
 			}
 
@@ -63,6 +65,7 @@ function generatePlaylistElem() {
 		node.querySelector('.mask').textContent = 'Track ' + i;
 		node.querySelector('.answer').textContent = track.title + ' by ' + track.artist;
 		node.querySelector('.command-play').dataset[data_track_id_key] = track.id;
+		node.querySelector('.command-spotify').href = track.spotifyUrl;
 
 		fragment.appendChild(node);
 		i++;
