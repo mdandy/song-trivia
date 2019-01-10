@@ -1,4 +1,4 @@
-const num_track = 10;
+
 const data_ordinal_key = 'ordinal';
 const data_track_id_key = 'trackId';
 const playlist_top_alltime = '2YRe7HRKNRvXdJBp9nXFza';
@@ -15,15 +15,22 @@ var playlist = {
 	}
 };
 
+var num_track = 10;
+var preset;
+var playlistId;
+
+
 function initialize() {
 	var params = getHashParams();
 	driver = new SpotifyDriver(params.access_token);
-	driver.fetchPlaylist(playlist_top_alltime)
+
+	var thePlaylist = playlistId ? playlistId : playlist_top_alltime;
+	driver.fetchPlaylist(thePlaylist)
 		.then(function(result) {
 			playlist = {};
 
 			var trackData = result.tracks.items;
-			var indices = getRandomNumbers(0, trackData.length, num_track);
+			var indices = preset ? preset : getRandomNumbers(0, trackData.length, num_track);
 			for (let i = 0; i < indices.length; i++) {
 				var track = trackData[indices[i]].track;;
 				playlist[track.id] = {

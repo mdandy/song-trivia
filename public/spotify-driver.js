@@ -26,9 +26,11 @@ class SpotifyDriver {
 				},
 				data: params,
 				success: function(response) {
+					console.log('Receive success for ' + apiName + ' API call.');
 					resolve(response);
 				},
 				error: function(jqXHR, textStatus, errorThrown) {
+					console.error('Receive error for ' + apiName + ' API call.');
 					var error = JSON.parse(jqXHR.responseText).error;
 					reject(new Error(error.message));
 				}
