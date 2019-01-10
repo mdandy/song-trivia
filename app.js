@@ -10,7 +10,8 @@ var cookieParser = require('cookie-parser');
 var port_number = process.env.PORT || 3000;
 var client_id = process.env.CLIENT_ID;
 var client_secret = process.env.CLIENT_SECRET;
-var redirect_uri = 'http://localhost:3000/callback/';
+var root_uri = process.env.ENVIRONMENT === 'HEROKU' ? 'https://song-trivia.herokuapp.com/' : 'http://localhost:3000/';
+var redirect_uri = root_uri + 'callback/';
 var spotify_web_api_uri = 'https://api.spotify.com/v1/';
 
 var access_token;
