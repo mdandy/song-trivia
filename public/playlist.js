@@ -30,6 +30,8 @@ function initialize() {
 			playlist = {};
 
 			var trackData = result.tracks.items;
+			console.log('Receiving ' + trackData.length + ' track data.');
+
 			var indices = preset ? preset : getRandomNumbers(0, trackData.length, num_track);
 			for (let i = 0; i < indices.length; i++) {
 				var track = trackData[indices[i]].track;;
